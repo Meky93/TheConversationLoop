@@ -1,1 +1,7 @@
-build/.cache/.vscode/*.o/P2_spec_v3.md
+build/
+.cache/
+.vscode/
+*.o
+P2_spec_v3.md
+README.md
+transcript.txt
