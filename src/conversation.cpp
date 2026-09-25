@@ -77,6 +77,7 @@ Conversation& Conversation::operator=(const Conversation& other) {
     return *this;
 }
 
+// Move constructor that transfers ownership of data from "other" to the current object.
 Conversation::Conversation(Conversation&& other) noexcept
     : data_(other.data_),
       size_(other.size_),
