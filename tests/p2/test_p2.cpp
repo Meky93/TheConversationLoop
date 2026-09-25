@@ -115,3 +115,39 @@ void test_copy_assignment_deep_copy() {
     assert(assigned.at(0).content() == "hello");
 }
 
+void test_move_constructor() {
+    Conversation original;
+    original.append(Message(Role::User, "hello"));
+    original.append(Message(Role::Assistant, "hi"));
+
+    const Message* original_data = original.begin();
+
+    Conversation moved(std::move(original));
+
+    assert(moved.begin() == original_data);
+    assert(moved.size() == 2);
+    assert(moved.at(0).content() == "hello");
+
+    assert(original.size() == 0);
+    assert(original.begin() == original.end());
+}
+
+void test_move_assignment() {
+    Conversation source;
+    source.append(Message(Role::User, "source"));
+
+    const Message* source_data = source.begin();
+
+    Conversation destination;
+    destination.append(Message(Role::Assistant, "old"));
+
+    destination = std::move(source);
+
+    assert(destination.begin() == source_data);
+    assert(destination.size() == 1);
+    assert(destination.at(0).content() == "source");
+
+    assert(source.size() == 0);
+    assert(source.begin() == source.end());
+}
+
