@@ -1,0 +1,98 @@
+[
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/model_client.cpp.o -c /home/jake/Project2/src/model_client.cpp",
+  "file": "/home/jake/Project2/src/model_client.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/model_client.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/scripted_client.cpp.o -c /home/jake/Project2/src/scripted_client.cpp",
+  "file": "/home/jake/Project2/src/scripted_client.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/scripted_client.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/replay_client.cpp.o -c /home/jake/Project2/src/replay_client.cpp",
+  "file": "/home/jake/Project2/src/replay_client.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/replay_client.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/harness.cpp.o -c /home/jake/Project2/src/harness.cpp",
+  "file": "/home/jake/Project2/src/harness.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/harness.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/message.cpp.o -c /home/jake/Project2/src/message.cpp",
+  "file": "/home/jake/Project2/src/message.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/message.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/conversation.cpp.o -c /home/jake/Project2/src/conversation.cpp",
+  "file": "/home/jake/Project2/src/conversation.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/conversation.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/sentinel_scanner.cpp.o -c /home/jake/Project2/src/sentinel_scanner.cpp",
+  "file": "/home/jake/Project2/src/sentinel_scanner.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/sentinel_scanner.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/miniharness.dir/src/main.cpp.o -c /home/jake/Project2/src/main.cpp",
+  "file": "/home/jake/Project2/src/main.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/miniharness.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/src/model_client.cpp.o -c /home/jake/Project2/src/model_client.cpp",
+  "file": "/home/jake/Project2/src/model_client.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/src/model_client.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/src/scripted_client.cpp.o -c /home/jake/Project2/src/scripted_client.cpp",
+  "file": "/home/jake/Project2/src/scripted_client.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/src/scripted_client.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/src/replay_client.cpp.o -c /home/jake/Project2/src/replay_client.cpp",
+  "file": "/home/jake/Project2/src/replay_client.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/src/replay_client.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/src/harness.cpp.o -c /home/jake/Project2/src/harness.cpp",
+  "file": "/home/jake/Project2/src/harness.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/src/harness.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/src/message.cpp.o -c /home/jake/Project2/src/message.cpp",
+  "file": "/home/jake/Project2/src/message.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/src/message.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/src/conversation.cpp.o -c /home/jake/Project2/src/conversation.cpp",
+  "file": "/home/jake/Project2/src/conversation.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/src/conversation.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/src/sentinel_scanner.cpp.o -c /home/jake/Project2/src/sentinel_scanner.cpp",
+  "file": "/home/jake/Project2/src/sentinel_scanner.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/src/sentinel_scanner.cpp.o"
+},
+{
+  "directory": "/home/jake/Project2/build",
+  "command": "/usr/bin/clang++ -I/home/jake/Project2/include  -Wall -Wextra -Wpedantic -fsanitize=address,undefined -g -g -std=gnu++17 -o CMakeFiles/test_p2.dir/tests/p2/test_p2.cpp.o -c /home/jake/Project2/tests/p2/test_p2.cpp",
+  "file": "/home/jake/Project2/tests/p2/test_p2.cpp",
+  "output": "/home/jake/Project2/build/CMakeFiles/test_p2.dir/tests/p2/test_p2.cpp.o"
+}
+]

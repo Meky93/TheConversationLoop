@@ -1,0 +1,4 @@
+/home/jake/Project2/build/CMakeFiles/miniharness.dir
+/home/jake/Project2/build/CMakeFiles/test_p2.dir
+/home/jake/Project2/build/CMakeFiles/edit_cache.dir
+/home/jake/Project2/build/CMakeFiles/rebuild_cache.dir
