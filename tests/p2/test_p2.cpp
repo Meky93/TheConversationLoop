@@ -151,3 +151,51 @@ void test_move_assignment() {
     assert(source.begin() == source.end());
 }
 
+void test_growth_behavior() {
+    Conversation conversation;
+
+    for (int i = 0; i < 100; ++i) {
+        conversation.append(
+            Message(Role::User, "message " + std::to_string(i))
+        );
+    }
+
+    assert(conversation.size() == 100);
+
+    for (std::size_t i = 0; i < conversation.size(); ++i) {
+        assert(conversation.at(i).content() ==
+               "message " + std::to_string(i));
+    }
+}
+
+std::string scan_all(
+    SentinelScanner& scanner,
+    const std::string& first,
+    const std::string& second = "") {
+    std::string result;
+
+    auto first_out = scanner.feed(first);
+    result += first_out.safe_text;
+
+    if (!second.empty()) {
+        auto second_out = scanner.feed(second);
+        result += second_out.safe_text;
+        assert(second_out.sentinel_found);
+    }
+
+    auto final_out = scanner.flush();
+    result += final_out.safe_text;
+
+    return result;
+}
+
+void test_scanner_clean_text() {
+    SentinelScanner scanner("<|end_conversation|>");
+
+    auto out = scanner.feed("Hello, world!");
+    auto flushed = scanner.flush();
+
+    assert(!out.sentinel_found);
+    assert(!flushed.sentinel_found);
+    assert(out.safe_text + flushed.safe_text == "Hello, world!");
+}
