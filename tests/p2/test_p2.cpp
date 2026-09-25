@@ -9,14 +9,29 @@
 
 #include "../../include/core/conversation.h"
 #include "../../include/core/sentinel_scanner.h"
+#include "../../include/core/message.h"
+
 
 #include <cassert>
-//#include <cstddef>
+#include <cstddef>
 #include <stdexcept>
-//#include <string>
+#include <string>
 //#include <utility>
 
+void test_empty_conversation();
+void test_empty_conversation_iteration();
+void test_system_message_ordering();
 
+int main() {
+    test_empty_conversation();
+    test_empty_conversation_iteration();
+    test_system_message_ordering();
+
+    return 0;
+}
+
+
+// Test cases for Conversation class and SentinelScanner class
 void test_empty_conversation() {
     Conversation conversation;
 

@@ -1,4 +1,4 @@
-
+#pragma once
 #include <string>
 
 // The Role class represents the role of a message sender in a conversation.
