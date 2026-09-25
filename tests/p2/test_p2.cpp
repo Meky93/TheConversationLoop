@@ -21,11 +21,14 @@
 void test_empty_conversation();
 void test_empty_conversation_iteration();
 void test_system_message_ordering();
+void test_copy_constructor_deep_copy();
+void test_copy_assignment_deep_copy();
 
 int main() {
     test_empty_conversation();
     test_empty_conversation_iteration();
     test_system_message_ordering();
+
 
     return 0;
 }
@@ -74,5 +77,41 @@ void test_system_message_ordering() {
     assert(conversation.at(0).content() == "You are helpful.");
     assert(conversation.at(1).role() == Role::User);
     assert(conversation.at(2).role() == Role::Assistant);
+}
+
+void test_copy_constructor_deep_copy() {
+    Conversation original;
+    original.append(Message(Role::User, "hello"));
+    original.append(Message(Role::Assistant, "hi"));
+
+    Conversation copy(original);
+
+    assert(copy.size() == original.size());
+    assert(copy.at(0).content() == "hello");
+    assert(copy.at(1).content() == "hi");
+
+    // The two Conversation objects must own different arrays.
+    assert(copy.begin() != original.begin());
+}
+
+void test_copy_assignment_deep_copy() {
+    Conversation original;
+    original.append(Message(Role::User, "hello"));
+
+    Conversation assigned;
+    assigned.append(Message(Role::Assistant, "old value"));
+
+    assigned = original;
+
+    assert(assigned.size() == 1);
+    assert(assigned.at(0).role() == Role::User);
+    assert(assigned.at(0).content() == "hello");
+    assert(assigned.begin() != original.begin());
+
+    // Self-assignment must be safe.
+    assigned = assigned;
+
+    assert(assigned.size() == 1);
+    assert(assigned.at(0).content() == "hello");
 }
 
