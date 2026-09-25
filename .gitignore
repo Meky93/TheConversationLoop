@@ -5,3 +5,5 @@ build/
 P2_spec_v3.md
 README.md
 transcript.txt
+CMakeCache.txt
+cmake_install.cmake
