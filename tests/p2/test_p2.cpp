@@ -199,3 +199,80 @@ void test_scanner_clean_text() {
     assert(!flushed.sentinel_found);
     assert(out.safe_text + flushed.safe_text == "Hello, world!");
 }
+
+void test_scanner_split_at_every_boundary() {
+    const std::string sentinel = "<|end_conversation|>";
+    const std::string text = "Goodbye." + sentinel;
+
+    for (std::size_t split = 0; split <= text.size(); ++split) {
+        SentinelScanner scanner(sentinel);
+
+        auto first = scanner.feed(
+            std::string_view(text).substr(0, split)
+        );
+
+        auto second = scanner.feed(
+            std::string_view(text).substr(split)
+        );
+
+        auto flushed = scanner.flush();
+
+        assert(!first.sentinel_found ||
+               first.safe_text == "Goodbye.");
+
+        assert(first.sentinel_found ||
+               second.sentinel_found);
+
+        assert(first.safe_text + second.safe_text + flushed.safe_text
+               == "Goodbye.");
+    }
+}
+
+void test_scanner_false_alarm() {
+    SentinelScanner scanner("<|end_conversation|>");
+
+    auto out = scanner.feed("<|end_world|>");
+    auto flushed = scanner.flush();
+
+    assert(!out.sentinel_found);
+    assert(!flushed.sentinel_found);
+    assert(out.safe_text + flushed.safe_text == "<|end_world|>");
+}
+
+void test_scanner_one_character_at_a_time() {
+    const std::string sentinel = "<|end_conversation|>";
+    const std::string text = "Goodbye." + sentinel;
+
+    SentinelScanner scanner(sentinel);
+    std::string safe_text;
+    bool found = false;
+
+    for (char character : text) {
+        auto out = scanner.feed(std::string(1, character));
+        safe_text += out.safe_text;
+        found = found || out.sentinel_found;
+    }
+
+    auto flushed = scanner.flush();
+    safe_text += flushed.safe_text;
+
+    assert(found);
+    assert(safe_text == "Goodbye.");
+}
+
+void test_scanner_bounded_stream_behavior() {
+    const std::string sentinel = "<|end_conversation|>";
+    SentinelScanner scanner(sentinel);
+
+    std::string safe_text;
+
+    for (int i = 0; i < 100000; ++i) {
+        auto out = scanner.feed("x");
+        safe_text += out.safe_text;
+    }
+
+    auto flushed = scanner.flush();
+    safe_text += flushed.safe_text;
+
+    assert(safe_text.size() == 100000);
+}
