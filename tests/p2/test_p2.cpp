@@ -18,16 +18,35 @@
 #include <string>
 //#include <utility>
 
+// Function declarations.
 void test_empty_conversation();
 void test_empty_conversation_iteration();
 void test_system_message_ordering();
 void test_copy_constructor_deep_copy();
 void test_copy_assignment_deep_copy();
+void test_move_constructor();
+void test_move_assignment();
+void test_growth_behavior();
+void test_scanner_clean_text();
+void test_scanner_split_at_every_boundary();
+void test_scanner_false_alarm();
+void test_scanner_one_character_at_a_time();
+void test_scanner_bounded_stream_behavior();
 
 int main() {
     test_empty_conversation();
     test_empty_conversation_iteration();
     test_system_message_ordering();
+    test_copy_constructor_deep_copy();
+    test_copy_assignment_deep_copy();
+    test_move_constructor();
+    test_move_assignment();
+    test_growth_behavior();
+    test_scanner_clean_text();
+    test_scanner_split_at_every_boundary();
+    test_scanner_false_alarm();
+    test_scanner_one_character_at_a_time();
+    test_scanner_bounded_stream_behavior();
 
 
     return 0;
