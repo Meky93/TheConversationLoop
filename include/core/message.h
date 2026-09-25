@@ -1,10 +1,10 @@
 
-#include <string>\
+#include <string>
 
 // The Role class represents the role of a message sender in a conversation.
 enum class Role { System, User, Assistant };
 
-// This class contains objects that represent single messages within a conversation. Each with a specific role. (System, User, or Assistant).
+// The Message class contains objects that represent single messages within a conversation. Each with a specific role. (System, User, or Assistant).
 class Message {
 public:
     // Default-constructs an empty System message with empty content.

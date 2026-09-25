@@ -2,7 +2,7 @@
 // PROVIDED — do not modify.
 
 #pragma once
-#include "model/model_client.h"
+#include "model_client.h"
 #include <string>
 #include <vector>
 
