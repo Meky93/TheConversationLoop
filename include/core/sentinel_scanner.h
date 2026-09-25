@@ -1,6 +1,8 @@
 #include <string>
 
-
+// Objects of the SentinelScanner class are used to scan a stream of text looking for a specific string. 
+// It holds back characters that could potentially be part of the sentinel until it can determine whether 
+// the sentinel has been fully seen or not.
 class SentinelScanner {
 public:
     explicit SentinelScanner(std::string sentinel);

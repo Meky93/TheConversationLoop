@@ -16,13 +16,14 @@ include_directories(include)
 
 # 1. Define the core files (everything EXCEPT main.cpp).
 set(CORE_SOURCES
-    src/conversation.cpp
-    src/sentinel_scanner.cpp
+
     src/model_client.cpp
     src/scripted_client.cpp
     src/replay_client.cpp
     src/harness.cpp
     src/message.cpp
+    src/conversation.cpp
+    src/sentinel_scanner.cpp
 )
 
 # 2. Build the main program.
